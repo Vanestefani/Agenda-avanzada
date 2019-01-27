@@ -5,6 +5,8 @@
  */
 package agenda;
 
+import Vista.Loading;
+
 /**
  *
  * @author Vanessa Estefania Corredor Andrade
@@ -15,7 +17,7 @@ public class Agenda {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+      Loading splash = new Loading();
     }
     
 }
