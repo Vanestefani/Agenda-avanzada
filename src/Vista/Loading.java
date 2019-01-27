@@ -5,21 +5,42 @@
  */
 package Vista;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.Timer;
+
 /**
  *
  * @author Vanessa Estefania Corredor Andrade
  */
 public class Loading extends javax.swing.JFrame {
-
+ //Variables que guarda el tiempo 
+    private Timer t;
+ private int n=0;
     /**
      * Creates new form Loading
      */
     public Loading() {
         initComponents();
-        //valor de barra de progreso
-      this.BarraProgreso.setValue(0);
-      // Centrar frame
+      BarraProgreso.setValue(0);
+      // Centrar
       setLocationRelativeTo(null);
+      //metodo para la barra de progreso
+      ActionListener accion =new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+       if(n<=100){
+       
+       BarraProgreso.setValue(n);
+       n=n+10;
+       }else{
+       t.stop();
+       dispose();
+       }
+            }
+        };
+      t =new Timer(100,accion);
+      t.start();
     }
 
     /**
@@ -31,6 +52,7 @@ public class Loading extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jSeparator1 = new javax.swing.JSeparator();
         Info2 = new javax.swing.JLabel();
         Info1 = new javax.swing.JLabel();
         Info = new javax.swing.JLabel();
@@ -46,35 +68,38 @@ public class Loading extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 52, 40, 300));
+
         Info2.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N
         Info2.setForeground(new java.awt.Color(255, 255, 255));
         Info2.setText("©Vanessa Correodor");
-        getContentPane().add(Info2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, 330, -1));
+        getContentPane().add(Info2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 180, 330, -1));
 
         Info1.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N
         Info1.setForeground(new java.awt.Color(255, 255, 255));
         Info1.setText("Año : 2019");
-        getContentPane().add(Info1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 130, -1));
+        getContentPane().add(Info1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 120, 130, -1));
 
         Info.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N
         Info.setForeground(new java.awt.Color(255, 255, 255));
         Info.setText("Version:1.0");
-        getContentPane().add(Info, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 130, -1));
+        getContentPane().add(Info, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 150, 130, -1));
 
         BarraProgreso.setBackground(new java.awt.Color(255, 255, 255));
         BarraProgreso.setForeground(new java.awt.Color(240, 104, 104));
         BarraProgreso.setValue(40);
         BarraProgreso.setBorderPainted(false);
-        getContentPane().add(BarraProgreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 490, 800, 15));
+        getContentPane().add(BarraProgreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 800, 15));
 
         Titulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Loading/texto.png"))); // NOI18N
-        getContentPane().add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 50, -1, -1));
+        getContentPane().add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
 
         Reloj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Loading/reloj.png"))); // NOI18N
-        getContentPane().add(Reloj, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 170, -1, -1));
+        getContentPane().add(Reloj, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, -1));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Loading/fondo.png"))); // NOI18N
-        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 500));
+        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 430));
 
         getAccessibleContext().setAccessibleDescription("El siguiente aplicativo consiste en una agenda para gestionar contactos ,eventos y notas");
 
@@ -124,5 +149,6 @@ public class Loading extends javax.swing.JFrame {
     private javax.swing.JLabel Info2;
     private javax.swing.JLabel Reloj;
     private javax.swing.JLabel Titulo;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

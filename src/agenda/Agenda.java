@@ -17,7 +17,10 @@ public class Agenda {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //instanciando Loading
       Loading splash = new Loading();
+      //ejecutando loading
+      splash.setVisible(true);
     }
     
 }
