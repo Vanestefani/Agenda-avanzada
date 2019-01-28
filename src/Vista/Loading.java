@@ -14,9 +14,6 @@ import javax.swing.Timer;
  * @author Vanessa Estefania Corredor Andrade
  */
 public class Loading extends javax.swing.JFrame {
- //Variables que guarda el tiempo 
-    private Timer t;
- private int n=0;
     /**
      * Creates new form Loading
      */
@@ -25,22 +22,7 @@ public class Loading extends javax.swing.JFrame {
       BarraProgreso.setValue(0);
       // Centrar
       setLocationRelativeTo(null);
-      //metodo para la barra de progreso
-      ActionListener accion =new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-       if(n<=100){
-       
-       BarraProgreso.setValue(n);
-       n=n+10;
-       }else{
-       t.stop();
-       dispose();
-       }
-            }
-        };
-      t =new Timer(100,accion);
-      t.start();
+  
     }
 
     /**
@@ -142,7 +124,7 @@ public class Loading extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JProgressBar BarraProgreso;
+    public javax.swing.JProgressBar BarraProgreso;
     private javax.swing.JLabel Fondo;
     private javax.swing.JLabel Info;
     private javax.swing.JLabel Info1;
