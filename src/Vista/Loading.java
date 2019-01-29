@@ -34,6 +34,7 @@ public class Loading extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Porcentaje = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         Info2 = new javax.swing.JLabel();
         Info1 = new javax.swing.JLabel();
@@ -49,6 +50,11 @@ public class Loading extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Porcentaje.setFont(new java.awt.Font("Corbel", 1, 36)); // NOI18N
+        Porcentaje.setForeground(new java.awt.Color(255, 255, 255));
+        Porcentaje.setText("50%");
+        getContentPane().add(Porcentaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, -1, -1));
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 52, 40, 300));
@@ -129,6 +135,7 @@ public class Loading extends javax.swing.JFrame {
     private javax.swing.JLabel Info;
     private javax.swing.JLabel Info1;
     private javax.swing.JLabel Info2;
+    public javax.swing.JLabel Porcentaje;
     private javax.swing.JLabel Reloj;
     private javax.swing.JLabel Titulo;
     private javax.swing.JSeparator jSeparator1;

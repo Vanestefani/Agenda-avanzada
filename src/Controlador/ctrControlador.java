@@ -6,6 +6,8 @@
 package Controlador;
 
 import Vista.Loading;
+import Vista.Inicio;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.logging.Level;
@@ -22,12 +24,13 @@ public class ctrControlador implements ActionListener {
     private Timer t;
     private int n = 0;
     //instanciando Loading
-    private final Loading splash ;
+    private final Loading splash;
+    private final Inicio vtnInicio;
     //Contructor 
 
-    public ctrControlador(Loading splash) {
+    public ctrControlador(Loading splash, Inicio vtnInicio) {
         this.splash = splash;
-  
+        this.vtnInicio = vtnInicio;
     }
 
     //iniciar aplicacion
@@ -43,11 +46,13 @@ public class ctrControlador implements ActionListener {
             public void actionPerformed(ActionEvent e) {
                 if (n <= 100) {
 
-                   splash.BarraProgreso.setValue(n);
+                    splash.BarraProgreso.setValue(n);
+                    splash.Porcentaje.setText(n + "%");
                     n = n + 10;
                 } else {
                     t.stop();
                     splash.dispose();
+vtnInicio.setVisible(true);
                 }
             }
         };
@@ -60,8 +65,4 @@ public class ctrControlador implements ActionListener {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-  
-
 }
-
-
