@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import java.awt.Color;
+
 /**
  *
  * @author Vanessa Estefania Corredor Andrade
@@ -17,6 +19,8 @@ public class Inicio extends javax.swing.JFrame {
     public Inicio() {
         initComponents();
        setLocationRelativeTo(null);
+       //jframe transparente
+       setBackground(new Color(0, 255, 0, 0)); 
     }
 
     /**
@@ -39,8 +43,12 @@ public class Inicio extends javax.swing.JFrame {
         Etiqueta2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        Inisiosesion = new rojeru_san.RSPanelsSlider();
+        titulo = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panelPresentacion.setBackground(new java.awt.Color(240, 104, 104));
@@ -110,6 +118,18 @@ public class Inicio extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/close.png"))); // NOI18N
         jLabel3.setText("x");
 
+        Inisiosesion.setBackground(new java.awt.Color(255, 255, 255));
+        Inisiosesion.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        Inisiosesion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        titulo.setFont(new java.awt.Font("Corbel", 3, 36)); // NOI18N
+        titulo.setForeground(new java.awt.Color(240, 104, 104));
+        titulo.setText("Inicio de sesión");
+        Inisiosesion.add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, 40));
+
+        jSeparator1.setForeground(new java.awt.Color(240, 104, 104));
+        Inisiosesion.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 380, 30));
+
         javax.swing.GroupLayout FondoLayout = new javax.swing.GroupLayout(Fondo);
         Fondo.setLayout(FondoLayout);
         FondoLayout.setHorizontalGroup(
@@ -119,11 +139,10 @@ public class Inicio extends javax.swing.JFrame {
                 .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(Etiqueta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Etiqueta2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(570, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FondoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(18, 18, 18)
+                .addComponent(Inisiosesion, javax.swing.GroupLayout.DEFAULT_SIZE, 507, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         FondoLayout.setVerticalGroup(
             FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -135,6 +154,10 @@ public class Inicio extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Etiqueta2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(176, Short.MAX_VALUE))
+            .addGroup(FondoLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(Inisiosesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 980, 400));
@@ -181,13 +204,16 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel Etiqueta1;
     private javax.swing.JPanel Etiqueta2;
     private javax.swing.JPanel Fondo;
+    private rojeru_san.RSPanelsSlider Inisiosesion;
     private javax.swing.JLabel Reloj;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lbfondorosa;
     private javax.swing.JPanel panelPresentacion;
     private javax.swing.JLabel textoinfo;
+    private javax.swing.JLabel titulo;
     private javax.swing.JLabel tlAgenda;
     // End of variables declaration//GEN-END:variables
 }
