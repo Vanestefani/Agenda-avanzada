@@ -6,6 +6,7 @@
 package agenda;
 
 import Controlador.ctrControlador;
+import Vista.Inicio;
 import Vista.Loading;
 import javax.swing.Timer;
 
@@ -21,8 +22,9 @@ public class Agenda {
     public static void main(String[] args) {
         //instanciando Loading
       Loading splash = new Loading();
+      Inicio vtnInicio =new Inicio();
       //instaciando controlador
-            ctrControlador ctr = new ctrControlador(splash);
+            ctrControlador ctr = new ctrControlador(splash,vtnInicio );
             ctr.inicio();
 
  
