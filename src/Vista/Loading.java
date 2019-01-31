@@ -54,7 +54,7 @@ public class Loading extends javax.swing.JFrame {
         Porcentaje.setFont(new java.awt.Font("Corbel", 1, 36)); // NOI18N
         Porcentaje.setForeground(new java.awt.Color(255, 255, 255));
         Porcentaje.setText("50%");
-        getContentPane().add(Porcentaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, -1, -1));
+        getContentPane().add(Porcentaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 370, -1, -1));
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 52, 40, 300));
@@ -71,7 +71,7 @@ public class Loading extends javax.swing.JFrame {
 
         Info.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N
         Info.setForeground(new java.awt.Color(255, 255, 255));
-        Info.setText("Version:1.0");
+        Info.setText("Versión : 1.0");
         getContentPane().add(Info, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 150, 130, -1));
 
         BarraProgreso.setBackground(new java.awt.Color(255, 255, 255));

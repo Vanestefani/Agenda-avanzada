@@ -67,12 +67,18 @@ public class ctrControlador implements ActionListener {//que escuche
     @Override
     public void actionPerformed(ActionEvent e) {//no borar clase abstracta
         if (e.getSource().equals(vtnInicio.btnPnRegister)) {
-            vtnInicio.PnSlider.nextPanel(5, vtnInicio.PnRegistro, vtnInicio.PnSlider.right);
-            vtnInicio.PnSlider.refresh();
+            if (!vtnInicio.btnPnRegister.isSelected()) {
+                vtnInicio.btnPnRegister.setSelected(true);
+                vtnInicio.btnPnSesion.setSelected(false);
+                vtnInicio.PnSlider.nextPanel(40, vtnInicio.PnRegistro, vtnInicio.PnSlider.right);
+            }
         }
         if (e.getSource().equals(vtnInicio.btnPnSesion)) {
-            vtnInicio.PnSlider.nextPanel(5, vtnInicio.PnInisio, vtnInicio.PnSlider.left);
-            vtnInicio.PnSlider.refresh();
+            if (!vtnInicio.btnPnSesion.isSelected()) {
+                vtnInicio.btnPnSesion.setSelected(true);
+                vtnInicio.btnPnRegister.setSelected(false);
+                vtnInicio.PnSlider.nextPanel(40, vtnInicio.PnInisio, vtnInicio.PnSlider.left);
+            }
         }
 
     }

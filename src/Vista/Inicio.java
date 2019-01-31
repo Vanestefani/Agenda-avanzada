@@ -44,7 +44,15 @@ public class Inicio extends javax.swing.JFrame {
         close = new javax.swing.JLabel();
         PnSlider = new diu.swe.habib.JPanelSlider.JPanelSlider();
         PnInisio = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         PnRegistro = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
 
         jTextField6.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N
         jTextField6.setForeground(new java.awt.Color(240, 104, 104));
@@ -65,7 +73,7 @@ public class Inicio extends javax.swing.JFrame {
         btnPnSesion.setForeground(new java.awt.Color(240, 104, 104));
         btnPnSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/icons8-enter-40.png"))); // NOI18N
         btnPnSesion.setText("Iniciar sesion");
-        btnPnSesion.setBorder(null);
+        btnPnSesion.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnPnSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPnSesionActionPerformed(evt);
@@ -78,7 +86,7 @@ public class Inicio extends javax.swing.JFrame {
         btnPnRegister.setForeground(new java.awt.Color(240, 104, 104));
         btnPnRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/icons8-registration-40.png"))); // NOI18N
         btnPnRegister.setText("Registrate");
-        btnPnRegister.setBorder(null);
+        btnPnRegister.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnPnRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPnRegisterActionPerformed(evt);
@@ -109,22 +117,84 @@ public class Inicio extends javax.swing.JFrame {
         close.setForeground(new java.awt.Color(255, 255, 255));
         close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/close.png"))); // NOI18N
         close.setText("x");
-        Fondo.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 10, 40, 40));
+        Fondo.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 20, 40, 40));
 
+        PnSlider.setBorder(null);
         PnSlider.setName("PnSlider"); // NOI18N
 
-        PnInisio.setBackground(new java.awt.Color(255, 51, 51));
+        PnInisio.setBackground(new java.awt.Color(255, 255, 255));
+        PnInisio.setForeground(new java.awt.Color(128, 214, 255));
         PnInisio.setName("PnInisio"); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("Corbel", 3, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(240, 104, 104));
+        jLabel1.setText("Iniciar Sesión");
+
+        jButton1.setBackground(new java.awt.Color(240, 104, 104));
+        jButton1.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Iniciar sesión");
+
+        jTextField1.setForeground(new java.awt.Color(240, 104, 104));
+        jTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(240, 104, 104)));
+        jTextField1.setName("txtEmail"); // NOI18N
+
+        jTextField2.setForeground(new java.awt.Color(240, 104, 104));
+        jTextField2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(240, 104, 104)));
+        jTextField2.setName("txtContraseña"); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("Corbel", 3, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(240, 104, 104));
+        jLabel2.setText("Email");
+
+        jLabel3.setFont(new java.awt.Font("Corbel", 3, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(240, 104, 104));
+        jLabel3.setText("Contraseña");
+
+        jLabel4.setForeground(new java.awt.Color(240, 104, 104));
+        jLabel4.setText("¿Olvidaste tu contraseña?");
+        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout PnInisioLayout = new javax.swing.GroupLayout(PnInisio);
         PnInisio.setLayout(PnInisioLayout);
         PnInisioLayout.setHorizontalGroup(
             PnInisioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(PnInisioLayout.createSequentialGroup()
+                .addGroup(PnInisioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PnInisioLayout.createSequentialGroup()
+                        .addGap(177, 177, 177)
+                        .addComponent(jLabel1))
+                    .addGroup(PnInisioLayout.createSequentialGroup()
+                        .addGap(61, 61, 61)
+                        .addGroup(PnInisioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4)))
+                    .addGroup(PnInisioLayout.createSequentialGroup()
+                        .addGap(213, 213, 213)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
         PnInisioLayout.setVerticalGroup(
             PnInisioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(PnInisioLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jLabel1)
+                .addGap(33, 33, 33)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel3)
+                .addGap(1, 1, 1)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4)
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         PnSlider.add(PnInisio, "card2");
@@ -136,7 +206,7 @@ public class Inicio extends javax.swing.JFrame {
         PnRegistro.setLayout(PnRegistroLayout);
         PnRegistroLayout.setHorizontalGroup(
             PnRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 580, Short.MAX_VALUE)
         );
         PnRegistroLayout.setVerticalGroup(
             PnRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -146,14 +216,19 @@ public class Inicio extends javax.swing.JFrame {
         PnSlider.add(PnRegistro, "card3");
 
         Fondo.add(PnSlider, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 580, 390));
+        PnSlider.getAccessibleContext().setAccessibleDescription("");
 
-        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 1010, 420));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/icons8-minus-40 (1).png"))); // NOI18N
+        jLabel5.setName("btnminimizar"); // NOI18N
+        Fondo.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 20, -1, -1));
+
+        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 1050, 440));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnPnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPnRegisterActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_btnPnRegisterActionPerformed
 
     private void btnPnSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPnSesionActionPerformed
@@ -204,6 +279,14 @@ public class Inicio extends javax.swing.JFrame {
     public javax.swing.JButton btnPnRegister;
     public javax.swing.JButton btnPnSesion;
     public javax.swing.JLabel close;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JLabel lbfondorosa;
     private javax.swing.JPanel panelPresentacion;
