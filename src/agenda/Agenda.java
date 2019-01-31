@@ -8,7 +8,7 @@ package agenda;
 import Controlador.ctrControlador;
 import Vista.Inicio;
 import Vista.Loading;
-import javax.swing.Timer;
+
 
 /**
  *
@@ -18,8 +18,9 @@ public class Agenda {
 
     /**
      * @param args the command line arguments
+     * @throws java.lang.ClassNotFoundException
      */
-    public static void main(String[] args) {
+    public static void main(String[] args)  throws ClassNotFoundException {
         //instanciando Loading
       Loading splash = new Loading();
       Inicio vtnInicio =new Inicio();

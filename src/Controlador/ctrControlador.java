@@ -13,14 +13,15 @@ import java.awt.event.ActionListener;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.Timer;
+import rojeru_san.RSPanelsSlider;
 
 /**
  *
  * @author Vanessa Estefania Corredor Andrade
  */
-public class ctrControlador implements ActionListener {
-    //Variables que guarda el tiempo 
+public class ctrControlador implements ActionListener {//que escuche
 
+    //Variables que guarda el tiempo 
     private Timer t;
     private int n = 0;
     //instanciando Loading
@@ -31,6 +32,9 @@ public class ctrControlador implements ActionListener {
     public ctrControlador(Loading splash, Inicio vtnInicio) {
         this.splash = splash;
         this.vtnInicio = vtnInicio;
+        this.vtnInicio.btnPnRegister.addActionListener(this);
+        this.vtnInicio.btnPnSesion.addActionListener(this);
+
     }
 
     //iniciar aplicacion
@@ -52,7 +56,7 @@ public class ctrControlador implements ActionListener {
                 } else {
                     t.stop();
                     splash.dispose();
-vtnInicio.setVisible(true);
+                    vtnInicio.setVisible(true);
                 }
             }
         };
@@ -61,8 +65,16 @@ vtnInicio.setVisible(true);
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void actionPerformed(ActionEvent e) {//no borar clase abstracta
+        if (e.getSource().equals(vtnInicio.btnPnRegister)) {
+            vtnInicio.PnSlider.nextPanel(5, vtnInicio.PnRegistro, vtnInicio.PnSlider.right);
+            vtnInicio.PnSlider.refresh();
+        }
+        if (e.getSource().equals(vtnInicio.btnPnSesion)) {
+            vtnInicio.PnSlider.nextPanel(5, vtnInicio.PnInisio, vtnInicio.PnSlider.left);
+            vtnInicio.PnSlider.refresh();
+        }
+
     }
 
 }

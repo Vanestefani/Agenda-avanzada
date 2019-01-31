@@ -32,20 +32,26 @@ public class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField6 = new javax.swing.JTextField();
         panelPresentacion = new javax.swing.JPanel();
+        btnPnSesion = new javax.swing.JButton();
+        btnPnRegister = new javax.swing.JButton();
         textoinfo = new javax.swing.JLabel();
         Reloj = new javax.swing.JLabel();
         tlAgenda = new javax.swing.JLabel();
         lbfondorosa = new javax.swing.JLabel();
         Fondo = new javax.swing.JPanel();
-        Etiqueta1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        Etiqueta2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        Inisiosesion = new rojeru_san.RSPanelsSlider();
-        titulo = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
+        close = new javax.swing.JLabel();
+        PnSlider = new diu.swe.habib.JPanelSlider.JPanelSlider();
+        PnInisio = new javax.swing.JPanel();
+        PnRegistro = new javax.swing.JPanel();
+
+        jTextField6.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N
+        jTextField6.setForeground(new java.awt.Color(240, 104, 104));
+        jTextField6.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(240, 104, 104)));
+        jTextField6.setName("TxtUusuario"); // NOI18N
+        jTextField6.setOpaque(false);
+        jTextField6.setSelectionColor(new java.awt.Color(240, 104, 104));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -53,6 +59,32 @@ public class Inicio extends javax.swing.JFrame {
 
         panelPresentacion.setBackground(new java.awt.Color(240, 104, 104));
         panelPresentacion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnPnSesion.setBackground(new java.awt.Color(237, 247, 152));
+        btnPnSesion.setFont(new java.awt.Font("Corbel", 1, 12)); // NOI18N
+        btnPnSesion.setForeground(new java.awt.Color(240, 104, 104));
+        btnPnSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/icons8-enter-40.png"))); // NOI18N
+        btnPnSesion.setText("Iniciar sesion");
+        btnPnSesion.setBorder(null);
+        btnPnSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPnSesionActionPerformed(evt);
+            }
+        });
+        panelPresentacion.add(btnPnSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 120, -1));
+
+        btnPnRegister.setBackground(new java.awt.Color(128, 214, 255));
+        btnPnRegister.setFont(new java.awt.Font("Corbel", 1, 12)); // NOI18N
+        btnPnRegister.setForeground(new java.awt.Color(240, 104, 104));
+        btnPnRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/icons8-registration-40.png"))); // NOI18N
+        btnPnRegister.setText("Registrate");
+        btnPnRegister.setBorder(null);
+        btnPnRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPnRegisterActionPerformed(evt);
+            }
+        });
+        panelPresentacion.add(btnPnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 410, 120, -1));
 
         textoinfo.setFont(new java.awt.Font("Corbel", 1, 24)); // NOI18N
         textoinfo.setForeground(new java.awt.Color(255, 255, 255));
@@ -66,104 +98,67 @@ public class Inicio extends javax.swing.JFrame {
         panelPresentacion.add(tlAgenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         lbfondorosa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Loading/fondo.png"))); // NOI18N
-        panelPresentacion.add(lbfondorosa, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 302, 500));
+        panelPresentacion.add(lbfondorosa, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 302, 510));
 
-        getContentPane().add(panelPresentacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(78, 0, 300, 500));
+        getContentPane().add(panelPresentacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(78, 10, 300, 490));
 
         Fondo.setBackground(new java.awt.Color(255, 255, 255));
+        Fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Etiqueta1.setBackground(new java.awt.Color(237, 247, 152));
+        close.setBackground(new java.awt.Color(250, 181, 122));
+        close.setForeground(new java.awt.Color(255, 255, 255));
+        close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/close.png"))); // NOI18N
+        close.setText("x");
+        Fondo.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 10, 40, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/icons8-enter-40.png"))); // NOI18N
+        PnSlider.setName("PnSlider"); // NOI18N
 
-        javax.swing.GroupLayout Etiqueta1Layout = new javax.swing.GroupLayout(Etiqueta1);
-        Etiqueta1.setLayout(Etiqueta1Layout);
-        Etiqueta1Layout.setHorizontalGroup(
-            Etiqueta1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Etiqueta1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(25, Short.MAX_VALUE))
+        PnInisio.setBackground(new java.awt.Color(255, 51, 51));
+        PnInisio.setName("PnInisio"); // NOI18N
+
+        javax.swing.GroupLayout PnInisioLayout = new javax.swing.GroupLayout(PnInisio);
+        PnInisio.setLayout(PnInisioLayout);
+        PnInisioLayout.setHorizontalGroup(
+            PnInisioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
-        Etiqueta1Layout.setVerticalGroup(
-            Etiqueta1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Etiqueta1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addContainerGap())
-        );
-
-        Etiqueta2.setBackground(new java.awt.Color(128, 214, 255));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/icons8-registration-40.png"))); // NOI18N
-
-        javax.swing.GroupLayout Etiqueta2Layout = new javax.swing.GroupLayout(Etiqueta2);
-        Etiqueta2.setLayout(Etiqueta2Layout);
-        Etiqueta2Layout.setHorizontalGroup(
-            Etiqueta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Etiqueta2Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jLabel2)
-                .addContainerGap(16, Short.MAX_VALUE))
-        );
-        Etiqueta2Layout.setVerticalGroup(
-            Etiqueta2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Etiqueta2Layout.createSequentialGroup()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 4, Short.MAX_VALUE))
+        PnInisioLayout.setVerticalGroup(
+            PnInisioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jLabel3.setBackground(new java.awt.Color(250, 181, 122));
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/close.png"))); // NOI18N
-        jLabel3.setText("x");
+        PnSlider.add(PnInisio, "card2");
 
-        Inisiosesion.setBackground(new java.awt.Color(255, 255, 255));
-        Inisiosesion.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        Inisiosesion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PnRegistro.setBackground(new java.awt.Color(255, 204, 255));
+        PnRegistro.setName("PnRegistro"); // NOI18N
 
-        titulo.setFont(new java.awt.Font("Corbel", 3, 36)); // NOI18N
-        titulo.setForeground(new java.awt.Color(240, 104, 104));
-        titulo.setText("Inicio de sesión");
-        Inisiosesion.add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, 40));
-
-        jSeparator1.setForeground(new java.awt.Color(240, 104, 104));
-        Inisiosesion.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 380, 30));
-
-        javax.swing.GroupLayout FondoLayout = new javax.swing.GroupLayout(Fondo);
-        Fondo.setLayout(FondoLayout);
-        FondoLayout.setHorizontalGroup(
-            FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(FondoLayout.createSequentialGroup()
-                .addGap(335, 335, 335)
-                .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Etiqueta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Etiqueta2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(Inisiosesion, javax.swing.GroupLayout.DEFAULT_SIZE, 507, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+        javax.swing.GroupLayout PnRegistroLayout = new javax.swing.GroupLayout(PnRegistro);
+        PnRegistro.setLayout(PnRegistroLayout);
+        PnRegistroLayout.setHorizontalGroup(
+            PnRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
-        FondoLayout.setVerticalGroup(
-            FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(FondoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(52, 52, 52)
-                .addComponent(Etiqueta1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Etiqueta2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(176, Short.MAX_VALUE))
-            .addGroup(FondoLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(Inisiosesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+        PnRegistroLayout.setVerticalGroup(
+            PnRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 980, 400));
+        PnSlider.add(PnRegistro, "card3");
+
+        Fondo.add(PnSlider, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 580, 390));
+
+        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 1010, 420));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnPnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPnRegisterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPnRegisterActionPerformed
+
+    private void btnPnSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPnSesionActionPerformed
+    
+    }//GEN-LAST:event_btnPnSesionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -201,19 +196,18 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Etiqueta1;
-    private javax.swing.JPanel Etiqueta2;
     private javax.swing.JPanel Fondo;
-    private rojeru_san.RSPanelsSlider Inisiosesion;
+    public javax.swing.JPanel PnInisio;
+    public javax.swing.JPanel PnRegistro;
+    public diu.swe.habib.JPanelSlider.JPanelSlider PnSlider;
     private javax.swing.JLabel Reloj;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JSeparator jSeparator1;
+    public javax.swing.JButton btnPnRegister;
+    public javax.swing.JButton btnPnSesion;
+    public javax.swing.JLabel close;
+    private javax.swing.JTextField jTextField6;
     private javax.swing.JLabel lbfondorosa;
     private javax.swing.JPanel panelPresentacion;
     private javax.swing.JLabel textoinfo;
-    private javax.swing.JLabel titulo;
     private javax.swing.JLabel tlAgenda;
     // End of variables declaration//GEN-END:variables
 }
