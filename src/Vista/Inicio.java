@@ -52,6 +52,18 @@ public class Inicio extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         PnRegistro = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jPasswordField2 = new javax.swing.JPasswordField();
+        jLabel11 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
         jTextField6.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N
@@ -199,18 +211,122 @@ public class Inicio extends javax.swing.JFrame {
 
         PnSlider.add(PnInisio, "card2");
 
-        PnRegistro.setBackground(new java.awt.Color(255, 204, 255));
+        PnRegistro.setBackground(new java.awt.Color(255, 255, 255));
         PnRegistro.setName("PnRegistro"); // NOI18N
+
+        jLabel6.setFont(new java.awt.Font("Corbel", 3, 36)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(240, 104, 104));
+        jLabel6.setText("Registrate");
+
+        jTextField3.setForeground(new java.awt.Color(240, 104, 104));
+        jTextField3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(240, 104, 104)));
+        jTextField3.setName("RtxtNombres"); // NOI18N
+
+        jLabel7.setFont(new java.awt.Font("Corbel", 3, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(240, 104, 104));
+        jLabel7.setText("Nombres");
+
+        jButton2.setBackground(new java.awt.Color(240, 104, 104));
+        jButton2.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Registrate");
+
+        jLabel8.setFont(new java.awt.Font("Corbel", 3, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(240, 104, 104));
+        jLabel8.setText("Apellidos");
+
+        jTextField4.setForeground(new java.awt.Color(240, 104, 104));
+        jTextField4.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(240, 104, 104)));
+        jTextField4.setName("RtxtApellidos"); // NOI18N
+
+        jLabel9.setFont(new java.awt.Font("Corbel", 3, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(240, 104, 104));
+        jLabel9.setText("Email");
+
+        jTextField5.setForeground(new java.awt.Color(240, 104, 104));
+        jTextField5.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(240, 104, 104)));
+        jTextField5.setName("RtxtEmail"); // NOI18N
+
+        jLabel10.setFont(new java.awt.Font("Corbel", 3, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(240, 104, 104));
+        jLabel10.setText("Contraseña");
+
+        jPasswordField1.setForeground(new java.awt.Color(240, 104, 104));
+        jPasswordField1.setText("jPasswordField1");
+        jPasswordField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(240, 104, 104)));
+        jPasswordField1.setName("RContraseña"); // NOI18N
+
+        jPasswordField2.setForeground(new java.awt.Color(240, 104, 104));
+        jPasswordField2.setText("jPasswordField1");
+        jPasswordField2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(240, 104, 104)));
+        jPasswordField2.setName("RtxtComContraeña"); // NOI18N
+
+        jLabel11.setFont(new java.awt.Font("Corbel", 3, 12)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(240, 104, 104));
+        jLabel11.setText("Comfirmar contraseña");
 
         javax.swing.GroupLayout PnRegistroLayout = new javax.swing.GroupLayout(PnRegistro);
         PnRegistro.setLayout(PnRegistroLayout);
         PnRegistroLayout.setHorizontalGroup(
             PnRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 580, Short.MAX_VALUE)
+            .addGroup(PnRegistroLayout.createSequentialGroup()
+                .addGroup(PnRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PnRegistroLayout.createSequentialGroup()
+                        .addGap(196, 196, 196)
+                        .addComponent(jLabel6))
+                    .addGroup(PnRegistroLayout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addGroup(PnRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(PnRegistroLayout.createSequentialGroup()
+                                .addGroup(PnRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                                .addGroup(PnRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addGap(64, 64, 64))
+            .addGroup(PnRegistroLayout.createSequentialGroup()
+                .addGap(228, 228, 228)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PnRegistroLayout.setVerticalGroup(
             PnRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(PnRegistroLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel6)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(PnRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(PnRegistroLayout.createSequentialGroup()
+                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PnRegistroLayout.createSequentialGroup()
+                        .addComponent(jLabel11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(43, 43, 43)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(93, Short.MAX_VALUE))
         );
 
         PnSlider.add(PnRegistro, "card3");
@@ -280,13 +396,25 @@ public class Inicio extends javax.swing.JFrame {
     public javax.swing.JButton btnPnSesion;
     public javax.swing.JLabel close;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JLabel lbfondorosa;
     private javax.swing.JPanel panelPresentacion;
