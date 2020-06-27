@@ -53,7 +53,6 @@ public class Inicio extends javax.swing.JFrame {
         input_inicio_password = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         PnRegistro = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
@@ -199,18 +198,6 @@ public class Inicio extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(240, 104, 104));
         jLabel3.setText("Contraseña");
 
-        jLabel4.setForeground(new java.awt.Color(240, 104, 104));
-        jLabel4.setText("¿Olvidaste tu contraseña?");
-        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel4MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel4MouseExited(evt);
-            }
-        });
-
         javax.swing.GroupLayout PnInisioLayout = new javax.swing.GroupLayout(PnInisio);
         PnInisio.setLayout(PnInisioLayout);
         PnInisioLayout.setHorizontalGroup(
@@ -222,17 +209,15 @@ public class Inicio extends javax.swing.JFrame {
                         .addGroup(PnInisioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(input_inicio_password, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4)
                             .addComponent(input_inicio_email, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(PnInisioLayout.createSequentialGroup()
                         .addGap(213, 213, 213)
-                        .addComponent(BtnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(BtnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PnInisioLayout.createSequentialGroup()
+                        .addGap(177, 177, 177)
+                        .addComponent(jLabel1)))
                 .addContainerGap(61, Short.MAX_VALUE))
-            .addGroup(PnInisioLayout.createSequentialGroup()
-                .addGap(177, 177, 177)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PnInisioLayout.setVerticalGroup(
             PnInisioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -249,9 +234,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(input_inicio_password, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
                 .addComponent(BtnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel4)
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
 
         PnSlider.add(PnInisio, "card2");
@@ -467,14 +450,6 @@ public class Inicio extends javax.swing.JFrame {
               btnPnRegister.setForeground(new Color (240,104,104));
     }//GEN-LAST:event_btnPnRegisterMouseExited
 
-    private void jLabel4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseEntered
-         jLabel4.setForeground(new Color (128,214,255));
-    }//GEN-LAST:event_jLabel4MouseEntered
-
-    private void jLabel4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseExited
-      jLabel4.setForeground(new Color (240,104,104));
-    }//GEN-LAST:event_jLabel4MouseExited
-
     /**
      * @param args the command line arguments
      */
@@ -529,7 +504,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;

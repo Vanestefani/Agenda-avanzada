@@ -10,6 +10,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -27,10 +28,13 @@ public class mdlConexion {
     public Connection getConexion() throws ClassNotFoundException, SQLException {
     try {
          Class.forName("com.mysql.jdbc.Driver");
-    con= (Connection) DriverManager.getConnection(this.driver,this.User,this.pass);}catch(ClassNotFoundException ex){
-       
-    Logger.getLogger(mdlConexion.class.getName()).log(Level.SEVERE,null,ex);
-    }
+    con= (Connection) DriverManager.getConnection(this.driver,this.User,this.pass);}catch (SQLException e) 
+                            {
+                                JOptionPane.showMessageDialog(null, "Error:" + e.getMessage(), "Error de Conexion",JOptionPane.ERROR_MESSAGE);
+                            }
+            
+            
+            
         return con;
           
     }
