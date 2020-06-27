@@ -6,6 +6,10 @@
 package Vista;
 
 import java.awt.Color;
+import java.awt.Image;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 
 /**
  *
@@ -41,13 +45,12 @@ public class Inicio extends javax.swing.JFrame {
         tlAgenda = new javax.swing.JLabel();
         lbfondorosa = new javax.swing.JLabel();
         Fondo = new javax.swing.JPanel();
-        close = new javax.swing.JLabel();
         PnSlider = new diu.swe.habib.JPanelSlider.JPanelSlider();
         PnInisio = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        BtnLogin = new javax.swing.JButton();
+        input_inicio_email = new javax.swing.JTextField();
+        input_inicio_password = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -64,7 +67,8 @@ public class Inicio extends javax.swing.JFrame {
         jPasswordField1 = new javax.swing.JPasswordField();
         jPasswordField2 = new javax.swing.JPasswordField();
         jLabel11 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        Btnclosed = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         jTextField6.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N
         jTextField6.setForeground(new java.awt.Color(240, 104, 104));
@@ -85,7 +89,17 @@ public class Inicio extends javax.swing.JFrame {
         btnPnSesion.setForeground(new java.awt.Color(240, 104, 104));
         btnPnSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/icons8-enter-40.png"))); // NOI18N
         btnPnSesion.setText("Iniciar sesion");
-        btnPnSesion.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnPnSesion.setBorder(null);
+        btnPnSesion.setBorderPainted(false);
+        btnPnSesion.setFocusable(false);
+        btnPnSesion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnPnSesionMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnPnSesionMouseExited(evt);
+            }
+        });
         btnPnSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPnSesionActionPerformed(evt);
@@ -98,7 +112,17 @@ public class Inicio extends javax.swing.JFrame {
         btnPnRegister.setForeground(new java.awt.Color(240, 104, 104));
         btnPnRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/icons8-registration-40.png"))); // NOI18N
         btnPnRegister.setText("Registrate");
-        btnPnRegister.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnPnRegister.setBorder(null);
+        btnPnRegister.setBorderPainted(false);
+        btnPnRegister.setFocusPainted(false);
+        btnPnRegister.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnPnRegisterMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnPnRegisterMouseExited(evt);
+            }
+        });
         btnPnRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPnRegisterActionPerformed(evt);
@@ -125,12 +149,6 @@ public class Inicio extends javax.swing.JFrame {
         Fondo.setBackground(new java.awt.Color(255, 255, 255));
         Fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        close.setBackground(new java.awt.Color(250, 181, 122));
-        close.setForeground(new java.awt.Color(255, 255, 255));
-        close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/close.png"))); // NOI18N
-        close.setText("x");
-        Fondo.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 20, 40, 40));
-
         PnSlider.setBorder(null);
         PnSlider.setName("PnSlider"); // NOI18N
 
@@ -142,18 +160,36 @@ public class Inicio extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(240, 104, 104));
         jLabel1.setText("Iniciar Sesión");
 
-        jButton1.setBackground(new java.awt.Color(240, 104, 104));
-        jButton1.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Iniciar sesión");
+        BtnLogin.setBackground(new java.awt.Color(240, 104, 104));
+        BtnLogin.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N
+        BtnLogin.setForeground(new java.awt.Color(255, 255, 255));
+        BtnLogin.setText("Iniciar sesión");
+        BtnLogin.setBorder(null);
+        BtnLogin.setBorderPainted(false);
+        BtnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BtnLogin.setFocusPainted(false);
+        BtnLogin.setRolloverEnabled(true);
+        BtnLogin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                BtnLoginMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                BtnLoginMouseExited(evt);
+            }
+        });
+        BtnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnLoginActionPerformed(evt);
+            }
+        });
 
-        jTextField1.setForeground(new java.awt.Color(240, 104, 104));
-        jTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(240, 104, 104)));
-        jTextField1.setName("txtEmail"); // NOI18N
+        input_inicio_email.setForeground(new java.awt.Color(240, 104, 104));
+        input_inicio_email.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(240, 104, 104)));
+        input_inicio_email.setName("txtEmail"); // NOI18N
 
-        jTextField2.setForeground(new java.awt.Color(240, 104, 104));
-        jTextField2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(240, 104, 104)));
-        jTextField2.setName("txtContraseña"); // NOI18N
+        input_inicio_password.setForeground(new java.awt.Color(240, 104, 104));
+        input_inicio_password.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(240, 104, 104)));
+        input_inicio_password.setName("txtContraseña"); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Corbel", 3, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(240, 104, 104));
@@ -166,6 +202,14 @@ public class Inicio extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(240, 104, 104));
         jLabel4.setText("¿Olvidaste tu contraseña?");
         jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel4MouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout PnInisioLayout = new javax.swing.GroupLayout(PnInisio);
         PnInisio.setLayout(PnInisioLayout);
@@ -174,39 +218,40 @@ public class Inicio extends javax.swing.JFrame {
             .addGroup(PnInisioLayout.createSequentialGroup()
                 .addGroup(PnInisioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PnInisioLayout.createSequentialGroup()
-                        .addGap(177, 177, 177)
-                        .addComponent(jLabel1))
-                    .addGroup(PnInisioLayout.createSequentialGroup()
                         .addGap(61, 61, 61)
                         .addGroup(PnInisioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(input_inicio_password, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4)))
+                            .addComponent(jLabel4)
+                            .addComponent(input_inicio_email, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(PnInisioLayout.createSequentialGroup()
                         .addGap(213, 213, 213)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(BtnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(61, Short.MAX_VALUE))
+            .addGroup(PnInisioLayout.createSequentialGroup()
+                .addGap(177, 177, 177)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PnInisioLayout.setVerticalGroup(
             PnInisioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnInisioLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addComponent(jLabel1)
-                .addGap(33, 33, 33)
+                .addGap(34, 34, 34)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(input_inicio_email, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
                 .addGap(1, 1, 1)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(input_inicio_password, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BtnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         PnSlider.add(PnInisio, "card2");
@@ -334,9 +379,32 @@ public class Inicio extends javax.swing.JFrame {
         Fondo.add(PnSlider, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 580, 390));
         PnSlider.getAccessibleContext().setAccessibleDescription("");
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/icons8-minus-40 (1).png"))); // NOI18N
-        jLabel5.setName("btnminimizar"); // NOI18N
-        Fondo.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 20, -1, -1));
+        Btnclosed.setBackground(new java.awt.Color(255, 255, 255));
+        Btnclosed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/close.png"))); // NOI18N
+        Btnclosed.setBorder(null);
+        Btnclosed.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/closed hover.png"))); // NOI18N
+        Btnclosed.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnclosedMouseClicked(evt);
+            }
+        });
+        Btnclosed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnclosedActionPerformed(evt);
+            }
+        });
+        Fondo.add(Btnclosed, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 20, 54, 40));
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/icons8-minus-40 (1).png"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/icons8-menos-40 (1).png"))); // NOI18N
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        Fondo.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 20, -1, -1));
 
         getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 1050, 440));
 
@@ -350,6 +418,62 @@ public class Inicio extends javax.swing.JFrame {
     private void btnPnSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPnSesionActionPerformed
     
     }//GEN-LAST:event_btnPnSesionActionPerformed
+
+    private void BtnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnLoginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnLoginActionPerformed
+
+    private void BtnclosedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnclosedActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnclosedActionPerformed
+
+    private void BtnclosedMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnclosedMouseClicked
+      this.dispose();
+    }//GEN-LAST:event_BtnclosedMouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+      this.setState(JFrame.ICONIFIED); 
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void BtnLoginMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLoginMouseEntered
+       BtnLogin.setBackground(new Color (237,247,152));
+              BtnLogin.setForeground(Color.BLACK);
+
+    }//GEN-LAST:event_BtnLoginMouseEntered
+
+    private void BtnLoginMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLoginMouseExited
+        BtnLogin.setBackground(new Color (240,104,104));
+                      BtnLogin.setForeground(Color.WHITE);
+
+    }//GEN-LAST:event_BtnLoginMouseExited
+
+    private void btnPnSesionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPnSesionMouseEntered
+       btnPnSesion.setBackground(new Color (240,104,104));
+                      btnPnSesion.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnPnSesionMouseEntered
+
+    private void btnPnSesionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPnSesionMouseExited
+         btnPnSesion.setBackground(new Color (237,247,152));
+              btnPnSesion.setForeground(new Color (240,104,104));
+    }//GEN-LAST:event_btnPnSesionMouseExited
+
+    private void btnPnRegisterMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPnRegisterMouseEntered
+         btnPnRegister.setBackground(new Color (240,104,104));
+                      btnPnRegister.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnPnRegisterMouseEntered
+
+    private void btnPnRegisterMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPnRegisterMouseExited
+      btnPnRegister.setBackground(new Color (128,214,255));
+              btnPnRegister.setForeground(new Color (240,104,104));
+    }//GEN-LAST:event_btnPnRegisterMouseExited
+
+    private void jLabel4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseEntered
+         jLabel4.setForeground(new Color (128,214,255));
+    }//GEN-LAST:event_jLabel4MouseEntered
+
+    private void jLabel4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseExited
+      jLabel4.setForeground(new Color (240,104,104));
+    }//GEN-LAST:event_jLabel4MouseExited
 
     /**
      * @param args the command line arguments
@@ -387,6 +511,8 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton BtnLogin;
+    private javax.swing.JButton Btnclosed;
     private javax.swing.JPanel Fondo;
     public javax.swing.JPanel PnInisio;
     public javax.swing.JPanel PnRegistro;
@@ -394,7 +520,8 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel Reloj;
     public javax.swing.JButton btnPnRegister;
     public javax.swing.JButton btnPnSesion;
-    public javax.swing.JLabel close;
+    public javax.swing.JTextField input_inicio_email;
+    public javax.swing.JTextField input_inicio_password;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -403,15 +530,12 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;

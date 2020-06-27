@@ -3,8 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/user/Documents/NetBeansProjects/Agenda/src/Vista/PanelAdministracion.java</file>
-            <file>file:/C:/Users/user/Documents/NetBeansProjects/Agenda/src/Vista/Inicio.java</file>
+            <file>file:/C:/Users/vanes/OneDrive/Escritorio/agenda-avanzada/src/Modelo/mdlConexion.java</file>
+            <file>file:/C:/Users/vanes/OneDrive/Escritorio/agenda-avanzada/src/Vista/Loading.java</file>
+            <file>file:/C:/Users/vanes/OneDrive/Escritorio/agenda-avanzada/src/Vista/Inicio.java</file>
+            <file>file:/C:/Users/vanes/OneDrive/Escritorio/agenda-avanzada/src/Modelo/modAgenda.java</file>
+            <file>file:/C:/Users/vanes/OneDrive/Escritorio/agenda-avanzada/src/agenda/Agenda.java</file>
         </group>
     </open-files>
 </project-private>

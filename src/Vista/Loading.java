@@ -66,7 +66,7 @@ public class Loading extends javax.swing.JFrame {
 
         Info1.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N
         Info1.setForeground(new java.awt.Color(255, 255, 255));
-        Info1.setText("Año : 2019");
+        Info1.setText("Año : 2020");
         getContentPane().add(Info1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 120, 130, -1));
 
         Info.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N

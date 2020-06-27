@@ -400,7 +400,7 @@ public class PanelAdministracion extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Corbel", 3, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(240, 104, 104));
-        jLabel11.setText("Lista de tareas");
+        jLabel11.setText("Tareas");
         PnInicio.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 310, -1));
 
         jPanelSlider1.add(PnInicio, "card2");
@@ -1148,6 +1148,11 @@ public class PanelAdministracion extends javax.swing.JFrame {
         jButton6.setFont(new java.awt.Font("Corbel", 3, 18)); // NOI18N
         jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Perfil");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
         Bg.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 10, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N
@@ -1181,6 +1186,10 @@ public class PanelAdministracion extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
