@@ -93,7 +93,7 @@ public class ctrControlador implements ActionListener {//que escuche
             if (!vtnInicio.btnPnRegister.isSelected()) {
                 vtnInicio.btnPnRegister.setSelected(true);
                 vtnInicio.btnPnSesion.setSelected(false);
-                vtnInicio.PnSlider.nextPanel(40, vtnInicio.PnRegistro, vtnInicio.PnSlider.right);
+                vtnInicio.PnSlider.nextPanel(20, vtnInicio.PnRegistro, vtnInicio.PnSlider.right);
             }
         }
         // Boton para mostrar panel de login
@@ -101,7 +101,7 @@ public class ctrControlador implements ActionListener {//que escuche
             if (!vtnInicio.btnPnSesion.isSelected()) {
                 vtnInicio.btnPnSesion.setSelected(true);
                 vtnInicio.btnPnRegister.setSelected(false);
-                vtnInicio.PnSlider.nextPanel(40, vtnInicio.PnInisio, vtnInicio.PnSlider.left);
+                vtnInicio.PnSlider.nextPanel(20, vtnInicio.PnInisio, vtnInicio.PnSlider.left);
             }
         }
         // registro
@@ -113,7 +113,7 @@ public class ctrControlador implements ActionListener {//que escuche
             usuario.setContraseña(vtnInicio.txtContraseña.getText());
             CofirmacioContraseña=vtnInicio.txtComfirContraseña.getText();
            
-            try {
+     
                 if (mdlUsuario.Registrarse(usuario)) {
                     JOptionPane.showMessageDialog(null, "Registro Guardado");
                   
@@ -122,11 +122,7 @@ public class ctrControlador implements ActionListener {//que escuche
                     JOptionPane.showMessageDialog(null, "Error al Guardar");
                     
                 }
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(ctrControlador.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (SQLException ex) {
-                Logger.getLogger(ctrControlador.class.getName()).log(Level.SEVERE, null, ex);
-            }
+        
             
             
         }
