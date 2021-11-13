@@ -1,6 +1,6 @@
 # Agenda java swing
 
-<p> Aplicación de escritorio desarrolalda con **Java** y la base de datos **Mysql** , en la cual puedes
+<p> Aplicación de escritorio desarrolalda con Java y la base de datos Mysql , en la cual puedes
 añadir contactos , eventos ,tareas y escribir tu propio diario . </p>
 <img src ="./Capturas/login.png">
 
