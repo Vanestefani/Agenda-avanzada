@@ -5,13 +5,17 @@
  */
 package Controlador;
 
+import Capsula.Capusuario;
 import Vista.Loading;
 import Vista.Inicio;
-
+import Modelo.mdlUsuario;
+import Vista.PanelAdministracion;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.Timer;
 import rojeru_san.RSPanelsSlider;
 
@@ -27,15 +31,32 @@ public class ctrControlador implements ActionListener {//que escuche
     //instanciando Loading
     private final Loading splash;
     private final Inicio vtnInicio;
-    //Contructor 
 
-    public ctrControlador(Loading splash, Inicio vtnInicio) {
+    //Capsulas
+    private final Capusuario usuario;//datos que voy acapturar
+    //modelo
+    private final mdlUsuario mdlUsuario; //BD
+
+    //Contructor 
+    public ctrControlador(Loading splash, Inicio vtnInicio,Capusuario usuario, mdlUsuario mdlUsuario) {
+    this.mdlUsuario=mdlUsuario;
+        this.usuario = usuario;
         this.splash = splash;
         this.vtnInicio = vtnInicio;
+        // Boton para mostrar panel de registro
         this.vtnInicio.btnPnRegister.addActionListener(this);
+        // Boton para mostrar panel de login
         this.vtnInicio.btnPnSesion.addActionListener(this);
+        //Boton para registrar
+        this.vtnInicio.BtnRegistrarUsuario.addActionListener(this);
+        //Boton para iniciar sesion
+        this.vtnInicio.BtnLogin.addActionListener(this);
 
-    }
+   }
+
+  
+
+ 
 
     //iniciar aplicacion
     public void inicio() {
@@ -65,7 +86,9 @@ public class ctrControlador implements ActionListener {//que escuche
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {//no borar clase abstracta
+    public void actionPerformed(ActionEvent e) {//no borrar clase abstracta
+    
+        /// Boton para mostrar panel de registro
         if (e.getSource().equals(vtnInicio.btnPnRegister)) {
             if (!vtnInicio.btnPnRegister.isSelected()) {
                 vtnInicio.btnPnRegister.setSelected(true);
@@ -73,12 +96,39 @@ public class ctrControlador implements ActionListener {//que escuche
                 vtnInicio.PnSlider.nextPanel(40, vtnInicio.PnRegistro, vtnInicio.PnSlider.right);
             }
         }
+        // Boton para mostrar panel de login
         if (e.getSource().equals(vtnInicio.btnPnSesion)) {
             if (!vtnInicio.btnPnSesion.isSelected()) {
                 vtnInicio.btnPnSesion.setSelected(true);
                 vtnInicio.btnPnRegister.setSelected(false);
                 vtnInicio.PnSlider.nextPanel(40, vtnInicio.PnInisio, vtnInicio.PnSlider.left);
             }
+        }
+        // registro
+        if (e.getSource().equals(vtnInicio.BtnRegistrarUsuario)) {
+          String CofirmacioContraseña;
+            usuario.setNombres(vtnInicio.txtNombres.getText());
+            usuario.setApellidos(vtnInicio.txtApellidos.getText());
+            usuario.setEmail(vtnInicio.txtEmail.getText());
+            usuario.setContraseña(vtnInicio.txtContraseña.getText());
+            CofirmacioContraseña=vtnInicio.txtComfirContraseña.getText();
+           
+            try {
+                if (mdlUsuario.Registrarse(usuario)) {
+                    JOptionPane.showMessageDialog(null, "Registro Guardado");
+                  
+                    
+                } else {
+                    JOptionPane.showMessageDialog(null, "Error al Guardar");
+                    
+                }
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(ctrControlador.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex) {
+                Logger.getLogger(ctrControlador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            
         }
 
     }

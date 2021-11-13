@@ -18,25 +18,25 @@ import javax.swing.JOptionPane;
  */
 public class mdlConexion {
 
-    private final String User = "root";
+    
+// Atributos de la clase
+
+    private final String user = "root";
     private final String pass = "";
-    private final String BD = "agenda_avanzada";
-    private final String puerto = "3306";
-    private final String url = "localhost";
-    private final String driver = "jdbc:mysql://" + url + ":" + puerto + "/" + BD;
+    private final String base = "agenda_avanzada";
+    private final String url = "jdbc:mysql://localhost:3306/" + base;
     private Connection con = null;
-    public Connection getConexion() throws ClassNotFoundException, SQLException {
-    try {
-         Class.forName("com.mysql.jdbc.Driver");
-    con= (Connection) DriverManager.getConnection(this.driver,this.User,this.pass);}catch (SQLException e) 
-                            {
-                                JOptionPane.showMessageDialog(null, "Error:" + e.getMessage(), "Error de Conexion",JOptionPane.ERROR_MESSAGE);
-                            }
-            
-            
-            
+    
+    public Connection getConexion() throws ClassNotFoundException{
+        
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            con = (Connection) DriverManager.getConnection(this.url, this.user, this.pass);
+        } catch(SQLException e){
+            System.err.println(e);
+        } 
+        
         return con;
-          
     }
 
 }

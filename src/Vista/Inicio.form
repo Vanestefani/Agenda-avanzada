@@ -85,6 +85,9 @@
               <Border info="null"/>
             </Property>
             <Property name="borderPainted" type="boolean" value="false"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
             <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Events>
@@ -120,6 +123,9 @@
               <Border info="null"/>
             </Property>
             <Property name="borderPainted" type="boolean" value="false"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
             <Property name="focusPainted" type="boolean" value="false"/>
           </Properties>
           <Events>
@@ -322,7 +328,7 @@
                     </Property>
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Default Cursor"/>
+                      <Color id="Hand Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                     <Property name="rolloverEnabled" type="boolean" value="true"/>
@@ -424,20 +430,20 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextField3" alignment="0" min="-2" pref="458" max="-2" attributes="0"/>
+                                      <Component id="txtNombres" alignment="0" min="-2" pref="458" max="-2" attributes="0"/>
                                       <Component id="jLabel7" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
                                       <Component id="jLabel8" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
-                                      <Component id="jTextField4" alignment="0" min="-2" pref="458" max="-2" attributes="0"/>
+                                      <Component id="txtApellidos" alignment="0" min="-2" pref="458" max="-2" attributes="0"/>
                                       <Component id="jLabel9" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
-                                      <Component id="jTextField5" alignment="0" min="-2" pref="458" max="-2" attributes="0"/>
+                                      <Component id="txtEmail" alignment="0" min="-2" pref="458" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jLabel10" alignment="0" min="-2" pref="72" max="-2" attributes="0"/>
-                                              <Component id="jPasswordField1" alignment="0" min="-2" pref="222" max="-2" attributes="0"/>
+                                              <Component id="txtContraseña" alignment="0" min="-2" pref="222" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace pref="26" max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jPasswordField2" min="-2" pref="222" max="-2" attributes="0"/>
+                                              <Component id="txtComfirContraseña" min="-2" pref="222" max="-2" attributes="0"/>
                                               <Component id="jLabel11" min="-2" pref="130" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -448,7 +454,7 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="227" max="-2" attributes="0"/>
-                          <Component id="jButton2" min="-2" pref="115" max="-2" attributes="0"/>
+                          <Component id="BtnRegistrarUsuario" min="-2" pref="115" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -461,30 +467,30 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField3" min="-2" pref="23" max="-2" attributes="0"/>
+                          <Component id="txtNombres" min="-2" pref="23" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField4" min="-2" pref="23" max="-2" attributes="0"/>
+                          <Component id="txtApellidos" min="-2" pref="23" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="jTextField5" min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="txtEmail" min="-2" pref="23" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jPasswordField1" min="-2" pref="24" max="-2" attributes="0"/>
+                                  <Component id="txtContraseña" min="-2" pref="24" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jPasswordField2" min="-2" pref="24" max="-2" attributes="0"/>
+                                  <Component id="txtComfirContraseña" min="-2" pref="24" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                          <Component id="jButton2" min="-2" pref="36" max="-2" attributes="0"/>
+                          <Component id="BtnRegistrarUsuario" min="-2" pref="36" max="-2" attributes="0"/>
                           <EmptySpace pref="12" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -502,7 +508,7 @@
                     <Property name="text" type="java.lang.String" value="Registrate"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField3">
+                <Component class="javax.swing.JTextField" name="txtNombres">
                   <Properties>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="68" green="68" red="f0" type="rgb"/>
@@ -516,6 +522,9 @@
                     </Property>
                     <Property name="name" type="java.lang.String" value="RtxtNombres" noResource="true"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel7">
                   <Properties>
@@ -528,7 +537,7 @@
                     <Property name="text" type="java.lang.String" value="Nombres"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton2">
+                <Component class="javax.swing.JButton" name="BtnRegistrarUsuario">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="68" green="68" red="f0" type="rgb"/>
@@ -541,6 +550,13 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Registrate"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BtnRegistrarUsuarioMouseClicked"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnRegistrarUsuarioActionPerformed"/>
+                  </Events>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel8">
                   <Properties>
@@ -553,7 +569,7 @@
                     <Property name="text" type="java.lang.String" value="Apellidos"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField4">
+                <Component class="javax.swing.JTextField" name="txtApellidos">
                   <Properties>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="68" green="68" red="f0" type="rgb"/>
@@ -567,6 +583,9 @@
                     </Property>
                     <Property name="name" type="java.lang.String" value="RtxtApellidos" noResource="true"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel9">
                   <Properties>
@@ -579,7 +598,7 @@
                     <Property name="text" type="java.lang.String" value="Email"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField5">
+                <Component class="javax.swing.JTextField" name="txtEmail">
                   <Properties>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="68" green="68" red="f0" type="rgb"/>
@@ -593,6 +612,9 @@
                     </Property>
                     <Property name="name" type="java.lang.String" value="RtxtEmail" noResource="true"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel10">
                   <Properties>
@@ -605,12 +627,11 @@
                     <Property name="text" type="java.lang.String" value="Contrase&#xf1;a"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JPasswordField" name="jPasswordField1">
+                <Component class="javax.swing.JPasswordField" name="txtContrase&#xf1;a">
                   <Properties>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="68" green="68" red="f0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="jPasswordField1"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
                         <MatteColorBorder bottom="1" left="0" right="0" top="0">
@@ -620,13 +641,15 @@
                     </Property>
                     <Property name="name" type="java.lang.String" value="RContrase&#xf1;a" noResource="true"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
-                <Component class="javax.swing.JPasswordField" name="jPasswordField2">
+                <Component class="javax.swing.JPasswordField" name="txtComfirContrase&#xf1;a">
                   <Properties>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="68" green="68" red="f0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="jPasswordField1"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
                         <MatteColorBorder bottom="1" left="0" right="0" top="0">
@@ -636,6 +659,9 @@
                     </Property>
                     <Property name="name" type="java.lang.String" value="RtxtComContrae&#xf1;a" noResource="true"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel11">
                   <Properties>
@@ -663,6 +689,9 @@
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
             <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Imagenes/Iconos/closed hover.png"/>
             </Property>
@@ -687,6 +716,9 @@
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
+            </Property>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
             </Property>
             <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Imagenes/Iconos/icons8-menos-40 (1).png"/>

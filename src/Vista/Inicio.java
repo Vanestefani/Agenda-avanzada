@@ -55,16 +55,16 @@ public class Inicio extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         PnRegistro = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        txtNombres = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        BtnRegistrarUsuario = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        txtApellidos = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        txtEmail = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jPasswordField2 = new javax.swing.JPasswordField();
+        txtContraseña = new javax.swing.JPasswordField();
+        txtComfirContraseña = new javax.swing.JPasswordField();
         jLabel11 = new javax.swing.JLabel();
         Btnclosed = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
@@ -90,6 +90,7 @@ public class Inicio extends javax.swing.JFrame {
         btnPnSesion.setText("Iniciar sesion");
         btnPnSesion.setBorder(null);
         btnPnSesion.setBorderPainted(false);
+        btnPnSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnPnSesion.setFocusable(false);
         btnPnSesion.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -113,6 +114,7 @@ public class Inicio extends javax.swing.JFrame {
         btnPnRegister.setText("Registrate");
         btnPnRegister.setBorder(null);
         btnPnRegister.setBorderPainted(false);
+        btnPnRegister.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnPnRegister.setFocusPainted(false);
         btnPnRegister.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -165,7 +167,7 @@ public class Inicio extends javax.swing.JFrame {
         BtnLogin.setText("Iniciar sesión");
         BtnLogin.setBorder(null);
         BtnLogin.setBorderPainted(false);
-        BtnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BtnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BtnLogin.setFocusPainted(false);
         BtnLogin.setRolloverEnabled(true);
         BtnLogin.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -246,48 +248,56 @@ public class Inicio extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(240, 104, 104));
         jLabel6.setText("Registrate");
 
-        jTextField3.setForeground(new java.awt.Color(240, 104, 104));
-        jTextField3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(240, 104, 104)));
-        jTextField3.setName("RtxtNombres"); // NOI18N
+        txtNombres.setForeground(new java.awt.Color(240, 104, 104));
+        txtNombres.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(240, 104, 104)));
+        txtNombres.setName("RtxtNombres"); // NOI18N
 
         jLabel7.setFont(new java.awt.Font("Corbel", 3, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(240, 104, 104));
         jLabel7.setText("Nombres");
 
-        jButton2.setBackground(new java.awt.Color(240, 104, 104));
-        jButton2.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Registrate");
+        BtnRegistrarUsuario.setBackground(new java.awt.Color(240, 104, 104));
+        BtnRegistrarUsuario.setFont(new java.awt.Font("Corbel", 3, 14)); // NOI18N
+        BtnRegistrarUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        BtnRegistrarUsuario.setText("Registrate");
+        BtnRegistrarUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnRegistrarUsuarioMouseClicked(evt);
+            }
+        });
+        BtnRegistrarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnRegistrarUsuarioActionPerformed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Corbel", 3, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(240, 104, 104));
         jLabel8.setText("Apellidos");
 
-        jTextField4.setForeground(new java.awt.Color(240, 104, 104));
-        jTextField4.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(240, 104, 104)));
-        jTextField4.setName("RtxtApellidos"); // NOI18N
+        txtApellidos.setForeground(new java.awt.Color(240, 104, 104));
+        txtApellidos.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(240, 104, 104)));
+        txtApellidos.setName("RtxtApellidos"); // NOI18N
 
         jLabel9.setFont(new java.awt.Font("Corbel", 3, 12)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(240, 104, 104));
         jLabel9.setText("Email");
 
-        jTextField5.setForeground(new java.awt.Color(240, 104, 104));
-        jTextField5.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(240, 104, 104)));
-        jTextField5.setName("RtxtEmail"); // NOI18N
+        txtEmail.setForeground(new java.awt.Color(240, 104, 104));
+        txtEmail.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(240, 104, 104)));
+        txtEmail.setName("RtxtEmail"); // NOI18N
 
         jLabel10.setFont(new java.awt.Font("Corbel", 3, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(240, 104, 104));
         jLabel10.setText("Contraseña");
 
-        jPasswordField1.setForeground(new java.awt.Color(240, 104, 104));
-        jPasswordField1.setText("jPasswordField1");
-        jPasswordField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(240, 104, 104)));
-        jPasswordField1.setName("RContraseña"); // NOI18N
+        txtContraseña.setForeground(new java.awt.Color(240, 104, 104));
+        txtContraseña.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(240, 104, 104)));
+        txtContraseña.setName("RContraseña"); // NOI18N
 
-        jPasswordField2.setForeground(new java.awt.Color(240, 104, 104));
-        jPasswordField2.setText("jPasswordField1");
-        jPasswordField2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(240, 104, 104)));
-        jPasswordField2.setName("RtxtComContraeña"); // NOI18N
+        txtComfirContraseña.setForeground(new java.awt.Color(240, 104, 104));
+        txtComfirContraseña.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(240, 104, 104)));
+        txtComfirContraseña.setName("RtxtComContraeña"); // NOI18N
 
         jLabel11.setFont(new java.awt.Font("Corbel", 3, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(240, 104, 104));
@@ -305,24 +315,24 @@ public class Inicio extends javax.swing.JFrame {
                     .addGroup(PnRegistroLayout.createSequentialGroup()
                         .addGap(46, 46, 46)
                         .addGroup(PnRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNombres, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(PnRegistroLayout.createSequentialGroup()
                                 .addGroup(PnRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                                 .addGroup(PnRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtComfirContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addGap(64, 64, 64))
             .addGroup(PnRegistroLayout.createSequentialGroup()
                 .addGap(227, 227, 227)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BtnRegistrarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PnRegistroLayout.setVerticalGroup(
@@ -333,27 +343,27 @@ public class Inicio extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtNombres, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PnRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(PnRegistroLayout.createSequentialGroup()
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel10)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(PnRegistroLayout.createSequentialGroup()
                         .addComponent(jLabel11)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtComfirContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(26, 26, 26)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BtnRegistrarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
@@ -365,6 +375,7 @@ public class Inicio extends javax.swing.JFrame {
         Btnclosed.setBackground(new java.awt.Color(255, 255, 255));
         Btnclosed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/close.png"))); // NOI18N
         Btnclosed.setBorder(null);
+        Btnclosed.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Btnclosed.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/closed hover.png"))); // NOI18N
         Btnclosed.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -381,6 +392,7 @@ public class Inicio extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/icons8-minus-40 (1).png"))); // NOI18N
         jButton1.setBorder(null);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconos/icons8-menos-40 (1).png"))); // NOI18N
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -450,6 +462,14 @@ public class Inicio extends javax.swing.JFrame {
               btnPnRegister.setForeground(new Color (240,104,104));
     }//GEN-LAST:event_btnPnRegisterMouseExited
 
+    private void BtnRegistrarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegistrarUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnRegistrarUsuarioActionPerformed
+
+    private void BtnRegistrarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnRegistrarUsuarioMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnRegistrarUsuarioMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -487,6 +507,7 @@ public class Inicio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton BtnLogin;
+    public static javax.swing.JButton BtnRegistrarUsuario;
     private javax.swing.JButton Btnclosed;
     private javax.swing.JPanel Fondo;
     public javax.swing.JPanel PnInisio;
@@ -498,7 +519,6 @@ public class Inicio extends javax.swing.JFrame {
     public javax.swing.JTextField input_inicio_email;
     public javax.swing.JTextField input_inicio_password;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -508,15 +528,15 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JLabel lbfondorosa;
     private javax.swing.JPanel panelPresentacion;
     private javax.swing.JLabel textoinfo;
     private javax.swing.JLabel tlAgenda;
+    public javax.swing.JTextField txtApellidos;
+    public javax.swing.JPasswordField txtComfirContraseña;
+    public javax.swing.JPasswordField txtContraseña;
+    public javax.swing.JTextField txtEmail;
+    public javax.swing.JTextField txtNombres;
     // End of variables declaration//GEN-END:variables
 }

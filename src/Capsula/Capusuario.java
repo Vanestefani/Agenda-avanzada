@@ -58,6 +58,8 @@ public class Capusuario {
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
+    
+    
  private int idusuario;
  private String email;
   private String contraseña;

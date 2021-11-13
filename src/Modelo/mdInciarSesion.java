@@ -5,10 +5,15 @@
  */
 package Modelo;
 
+import Capsula.Capusuario;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 /**
  *
  * @author vanes
  */
 public class mdInciarSesion extends mdlConexion{
-    
+     
 }
